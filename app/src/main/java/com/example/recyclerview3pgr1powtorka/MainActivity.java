@@ -1,6 +1,9 @@
 package com.example.recyclerview3pgr1powtorka;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
@@ -32,5 +35,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         przygotujDane();
+        RecyclerView recyclerView = findViewById(R.id.recyclerView);
+        ObrazkiAdapter adapter = new ObrazkiAdapter(this,listaObrazkow);
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new GridLayoutManager(this,2));
     }
 }

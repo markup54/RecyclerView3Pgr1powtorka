@@ -38,7 +38,7 @@ public class ObrazkiAdapter extends RecyclerView.Adapter <ObrazkiAdapter.Obrazki
 
     @Override
     public int getItemCount() {
-        return 0;
+        return listaObrazkow.size();
     }
 
     public class ObrazkiViewHolder extends RecyclerView.ViewHolder {
